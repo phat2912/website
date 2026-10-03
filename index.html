@@ -422,6 +422,15 @@
         <i class="fa-solid fa-bag-shopping"></i> Mua Tài Khoản Game
       </a>
     </div>
+// Gắn sự kiện chuyển trang/hiển thị kho hàng khi ấn vào xem
+document.querySelectorAll('.btn-view-service').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const serviceId = this.dataset.serviceId;
+        // Chuyển hướng đến trang danh sách hàng của dịch vụ đó
+        window.location.href = `/store/service-detail.html?id=${serviceId}`;
+    });
+});
 
     <!-- LỊCH SỬ & QUẢN LÝ -->
     <div class="menu-group">
